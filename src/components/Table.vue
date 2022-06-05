@@ -57,7 +57,7 @@ export default {
 }
 
 .table__data {
-	border: 1px solid $blueColor;
+	border: 1px solid lighten($color: $blueColor, $amount: 35);
 	text-align: left;
 	padding: 8px;
 	text-align: center;
@@ -65,17 +65,20 @@ export default {
 		font-size: .95rem;
 		letter-spacing: 2px;
 		font-weight: 600;
-		text-decoration: underline;
 	}
 }
 .table__row {
 	&:nth-child(odd) {
-		background-color: $blueColor;
-		color: $lightColor;	
+		background-color: lighten($color: $blueColor, $amount: 35);
+		color: darken($blueColor, 30);	
 	}
 	&:nth-child(even) {
 		background-color: $lightColor;
-		color: $blueColor;
+		color: darken($blueColor, 30);
+	}
+	&:first-child {
+		background-color: $blueColor;
+		color: $lightColor;
 	}
 }
 @media (max-width: 720px) {

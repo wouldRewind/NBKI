@@ -17,12 +17,10 @@
 	font-family: 'Roboto', sans-serif;
 	font-weight: 600;
 	font-style: .875rem;
-	box-shadow: -2px 3px 9px #ccc;
 	transition: $transition;
 	&:hover {
 		background: $blueColor;
 		color: $lightColor;
-		box-shadow: -4px 5px 15px #ccc;
 	}
 }
 </style>
