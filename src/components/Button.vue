@@ -1,14 +1,8 @@
 <template>
-	<button class="generate-btn">
+	<button @click="$emit('generate')" class="generate-btn">
 		Сгенерировать
 	</button>	
 </template>
-
-<script>
-export default {
-	
-}
-</script>
 
 <style scoped>
 
