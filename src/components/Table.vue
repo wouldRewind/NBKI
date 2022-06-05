@@ -2,7 +2,7 @@
 	<table class="table">
 		<tr class="table__row table__header">
 			<th
-			class="table__data"
+			class="table__data table__title"
 			v-for="(name, index) in header"
 			:key="index">
 			{{ name }}
@@ -21,6 +21,7 @@
 		</tr>
 	</table>
 </template>
+
 
 <script>
 import { tableConfig } from '@/assets/config'
@@ -59,15 +60,32 @@ export default {
 	border: 1px solid $blueColor;
 	text-align: left;
 	padding: 8px;
+	text-align: center;
+	&.table__title {
+		font-size: .95rem;
+		letter-spacing: 2px;
+		font-weight: 600;
+		text-decoration: underline;
+	}
 }
-.table__row:nth-child(odd) {
-	background-color: $blueColor;
-	color: $lightColor;
+.table__row {
+	&:nth-child(odd) {
+		background-color: $blueColor;
+		color: $lightColor;	
+	}
+	&:nth-child(even) {
+		background-color: $lightColor;
+		color: $blueColor;
+	}
 }
-.table__row:nth-child(even) {
-	background-color: $lightColor;
-	color: $blueColor;
-}
+@media (max-width: 720px) {
+		.table {
+			font-size: .7rem;
+		}
+		.table__title.table__data {
+			font-size: .8rem;
+		}
+	}
 
 
 </style>
